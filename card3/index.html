@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cardwrapper {
+            position: relative;
+            width: 313px;
+            height: 462px;
+            scale: .97;
+            margin: 3vmin .8vmax;
+            cursor: pointer;
+        }
+
+        .card-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #d2d2d2;
+            transition-duration: .1s;
+            -webkit-clip-path: path("M1 443.824V92.4971C1 87.9401 2.79117 83.5658 5.98718 80.3176L78.9268 6.18619C82.1912 2.86844 86.6508 1 91.3052 1H290.247C299.838 1 307.612 8.77488 307.612 18.3657V415.334C307.612 424.925 299.838 432.699 290.247 432.699H165.34C161.033 432.699 156.879 434.3 153.686 437.191L132.134 456.699C128.941 459.589 124.787 461.19 120.48 461.19H18.3657C8.77487 461.19 1 453.415 1 443.824Z");
+            clip-path: path("M1 443.824V92.4971C1 87.9401 2.79117 83.5658 5.98718 80.3176L78.9268 6.18619C82.1912 2.86844 86.6508 1 91.3052 1H290.247C299.838 1 307.612 8.77488 307.612 18.3657V415.334C307.612 424.925 299.838 432.699 290.247 432.699H165.34C161.033 432.699 156.879 434.3 153.686 437.191L132.134 456.699C128.941 459.589 124.787 461.19 120.48 461.19H18.3657C8.77487 461.19 1 453.415 1 443.824Z");
+            z-index: -1;
+            scale: 1.007;
+        }
+
+        .card {
+            width: 313px;
+            height: 462px;
+            /* -webkit-clip-path: path("M1 443.824V92.4971C1 87.9401 2.79117 83.5658 5.98718 80.3176L78.9268 6.18619C82.1912 2.86844 86.6508 1 91.3052 1H290.247C299.838 1 307.612 8.77488 307.612 18.3657V415.334C307.612 424.925 299.838 432.699 290.247 432.699H165.34C161.033 432.699 156.879 434.3 153.686 437.191L132.134 456.699C128.941 459.589 124.787 461.19 120.48 461.19H18.3657C8.77487 461.19 1 453.415 1 443.824Z"); */
+            clip-path: path("M1 443.824V92.4971C1 87.9401 2.79117 83.5658 5.98718 80.3176L78.9268 6.18619C82.1912 2.86844 86.6508 1 91.3052 1H290.247C299.838 1 307.612 8.77488 307.612 18.3657V415.334C307.612 424.925 299.838 432.699 290.247 432.699H165.34C161.033 432.699 156.879 434.3 153.686 437.191L132.134 456.699C128.941 459.589 124.787 461.19 120.48 461.19H18.3657C8.77487 461.19 1 453.415 1 443.824Z");
+            position: relative;
+        }
+
+        .card:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transition-duration: .3s;
+            background: linear-gradient(to top, black, black, transparent, transparent, transparent), url(./assets/bg.jpg);
+        }
+
+        .hover1 {
+            position: absolute;
+            z-index: -2;
+            width: 100px;
+            height: 100px;
+            transform: translate(100px, 100px);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+            transition-duration: .3s;
+            opacity: 0;
+            background-color: #000;
+        }
+
+        .hover2 {
+            position: absolute;
+            width: 174.5px;
+            height: 28px;
+            right: 0;
+            bottom: 0;
+            border-radius: 10px;
+            transform: translate(-100px, -100px);
+            z-index: -2;
+            transition-duration: .3s;
+            opacity: 0;
+            background-color: #000000;
+        }
+
+        .cardwrapper:hover>.hover1 {
+            transform: translate(5px, 5px);
+            opacity: 1;
+            background-color: #000000;
+        }
+
+        .cardwrapper:hover>.hover2 {
+            transform: translate(-20px, -5px);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cardwrapper teamwrapper">
+        <div class="hover1"></div>
+        <div class="hover2"></div>
+        <div class="card-border red teamborder"></div>
+        <section class="card red team-card"><img class="team-card-portrait" src="/Images/team/omm.png" alt="photo">
+            
+        </section>
+    </div>
+</body>
+
+</html>
